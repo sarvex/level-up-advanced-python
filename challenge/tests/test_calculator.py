@@ -6,7 +6,7 @@ def test_no_error():
         print(1 * 2)    
         print(2 / 3)
         print(3 + 4)
-    assert c.error == None
+    assert c.error is None
 
 def test_zero_division_error():
     with pytest.raises(ZeroDivisionError):

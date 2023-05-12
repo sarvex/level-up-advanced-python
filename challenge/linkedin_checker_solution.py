@@ -42,8 +42,7 @@ def check_linkedin_feature(feature_text, url_or_login):
     result = data.get(url_or_login, None)
     if result is None:
         raise ValueError('Feature needs to be either login or custom_url')
-    else:
-        length = len(feature_text) in data[url_or_login].range
-        regex = bool(data[url_or_login].regex.search(feature_text))
-        return length & regex
+    length = len(feature_text) in data[url_or_login].range
+    regex = bool(data[url_or_login].regex.search(feature_text))
+    return length & regex
 
